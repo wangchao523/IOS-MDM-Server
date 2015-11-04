@@ -20,6 +20,7 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 
+import com.notnoop.apns.PayloadBuilder;
 import com.zuoyy.pojo.Mdm;
 import com.notnoop.apns.APNS;
 import com.notnoop.apns.ApnsService;
@@ -52,14 +53,16 @@ public class PushUtils {
         try {
             ApnsService service =
                     APNS.newService()
-                            .withCert(p12Path,MDMPASS)
-                            .withProductionDestination()
+                            .withCert(p12Path, MDMPASS)
+                            .withSandboxDestination()   // 开发地址
                             .build();
-            String mdmPayload = APNS.newPayload().customField("mdm", mdm.getPushMagic()).build();
+//            String mdmPayload = APNS.newPayload().customField("mdm", mdm.getPushMagic()).build();
+            String mdmPayload = PayloadBuilder.newPayload().mdm(mdm.getPushMagic()).build();
             service.push(mdm.getToken(), mdmPayload);
             pushState = 1;
             System.out.println("推送信息已发送！");
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println("出错了："+e.getMessage());
             pushState = 0;
         }

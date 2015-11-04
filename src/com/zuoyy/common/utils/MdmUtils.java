@@ -8,6 +8,11 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 import com.zuoyy.pojo.Mdm;
 
 /**
@@ -108,7 +113,7 @@ public class MdmUtils {
         strBlank =  strBlank.replace("</real>","</string>");
         Map<String, String> plistMap = new HashMap<String, String>();
         /**获取key、string列表数据**/
-        List<String> keyList = getList(KEY,strBlank);
+        List<String> keyList = getList(KEY, strBlank);
         List<String> stringList = getList(STRING,strBlank);
         /**组装数据称plistMap**/
         for(int i=0;i<stringList.size();i++){
@@ -354,7 +359,7 @@ public class MdmUtils {
         Map<String, String> plistMap = new HashMap<String, String>();
         /**获取key、string、data列表数据**/
         List<String> keyList = getList(KEY,strBlank);
-        List<String> stringList = getList(STRING,strBlank);
+        List<String> stringList = getList(STRING, strBlank);
         List<String> dataList = getList(DATA,strBlank);
         /**组装数据称plistMap**/
         int stringNum = 0;
@@ -364,7 +369,32 @@ public class MdmUtils {
             }else if(keyList.get(i).equals(UnlockToken)){
                 plistMap.put(UnlockToken, dataList.get(1));
             }else{
-                plistMap.put(keyList.get(i), stringList.get(stringNum));stringNum++;
+                plistMap.put(keyList.get(i), stringList.get(stringNum));
+                stringNum++;
+            }
+        }
+        return plistMap;
+    }
+
+    public static Map<String, String> parseXmlTokenUpdate(String pList){
+        Document document = Jsoup.parse(pList);
+        Element dictEle = document.getElementsByTag("dict").get(0);
+        Elements keyVals = dictEle.children();
+        Map<String, String> plistMap = new HashMap<>();
+        for (int i=0; i<keyVals.size(); i += 2) {
+            Element keyEle = keyVals.get(i);
+            Element valEle = keyVals.get(i+1);
+            if (keyEle.tagName().equals("key")) {
+                String key = keyEle.text();
+                String value = null;
+                if (valEle.tagName().equals("string") || valEle.tagName().equals("data")) {
+                    value = valEle.text();
+                } else if (valEle.tagName().equals("false")) {
+                    value = "false";
+                }  else if (valEle.tagName().equals("true")) {
+                    value = "true";
+                }
+                plistMap.put(key, value);
             }
         }
         return plistMap;

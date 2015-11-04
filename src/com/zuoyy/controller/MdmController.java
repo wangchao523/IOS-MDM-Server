@@ -124,9 +124,10 @@ public class MdmController {
             sos.close();
         } else if (info.toString().contains(MdmUtils.TokenUpdate)) {
             System.out.println("-------------------TokenUpdate start---------------");
-            System.out.println("Device->Server TokenUpdate:\n"+info.toString());
+         System.out.println("Device->Server TokenUpdate:\n"+info.toString());
             /**保存返回的数据**/
-            Map<String, String> plistMap = MdmUtils.parseTokenUpdate(info.toString());
+//            Map<String, String> plistMap = MdmUtils.parseTokenUpdate(info.toString());
+            Map<String, String> plistMap = MdmUtils.parseXmlTokenUpdate(info.toString());
             String UnlockToken = MdmUtils.parseUnlockToken(info.toString());
             String UDID = plistMap.get(MdmUtils.UDID);
             String Topic = plistMap.get(MdmUtils.Topic);
@@ -376,6 +377,7 @@ public class MdmController {
              /**对设备进行锁屏**/
              String pemFile = ConfigUtils.getConfig("APNS_P12MDM");
              String pemPath = request.getSession().getServletContext().getRealPath("/mdmtool")+ "/" + pemFile;
+             System.out.println("-P12---" + pemPath);
              int pushState = PushUtils.singleMDMPush(pemPath, mdm);
              if (pushState == 1) {
                  Command command = new Command();
@@ -580,7 +582,7 @@ public class MdmController {
                 String oldCmd = " openssl smime -sign -in {0} -out {1} -signer {2} -inkey {3} -certfile {4} -outform der -nodetach ";
                 String newCmd = MessageFormat.format(oldCmd,oldPath,newPath,crtPath,keyPath,pemPath);
                 System.out.println("OpenSSL：\n" + newCmd);
-                Runtime.getRuntime().exec("cmd /c "+newCmd);
+                Runtime.getRuntime().exec(newCmd);
                 System.out.println("----------------------签名mobileconfig文件 end---------------------");
             }
             System.out.println("----------------------下载签名后的mobileconfig文件 start---------------------");
@@ -591,7 +593,7 @@ public class MdmController {
             /**获取配置文件动态组装参数**/
             System.out.println("----------------------下载签名后的mobileconfig文件 end---------------------");
             try {
-                Thread.sleep(2000);// 括号里面的5000代表5000毫秒，也就是5秒，可以该成你需要的时间
+                Thread.sleep(3000);// 括号里面的5000代表5000毫秒，也就是5秒，可以该成你需要的时间
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
