@@ -26,7 +26,7 @@ public class BaseDao {
 	 */
 	public Object getByHql(String queryString,Object... params) {
 		List<?> list = hibernateTemplate.find(queryString, params);
-		if(null != list && list.size()==1){
+		if(null != list && list.size() > 0){
 			return list.get(0);
 		}
 		return null;

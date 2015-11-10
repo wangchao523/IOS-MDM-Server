@@ -11,6 +11,8 @@ import java.security.KeyStore;
 import java.security.MessageDigest;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
+import java.util.Date;
+import java.util.Map;
 
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLException;
@@ -20,6 +22,7 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 
+import com.notnoop.apns.ApnsNotification;
 import com.notnoop.apns.PayloadBuilder;
 import com.zuoyy.pojo.Mdm;
 import com.notnoop.apns.APNS;
@@ -54,16 +57,20 @@ public class PushUtils {
             ApnsService service =
                     APNS.newService()
                             .withCert(p12Path, MDMPASS)
-                            .withSandboxDestination()   // 开发地址
+                            .withProductionDestination()
                             .build();
-//            String mdmPayload = APNS.newPayload().customField("mdm", mdm.getPushMagic()).build();
-            String mdmPayload = PayloadBuilder.newPayload().mdm(mdm.getPushMagic()).build();
+            String mdmPayload = APNS.newPayload().customField("mdm", mdm.getPushMagic()).build();
             service.push(mdm.getToken(), mdmPayload);
+            Map<String, Date> inactiveDevices = service.getInactiveDevices();
+            for (String deviceToken : inactiveDevices.keySet()) {
+                Date inactiveAsOf = inactiveDevices.get(deviceToken);
+                System.out.println("inactive device：" + deviceToken + ", time:" + inactiveAsOf);
+            }
             pushState = 1;
-            System.out.println("推送信息已发送！");
+            System.out.println("push ok");
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("出错了："+e.getMessage());
+            System.out.println("error："+ e.getMessage());
             pushState = 0;
         }
         return pushState;

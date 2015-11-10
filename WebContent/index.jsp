@@ -48,8 +48,8 @@
                  <tr>
                   <td align="center">
                   <a id="lock" class="btn btn-default" href="javascript:execCommand('lock');">锁屏</a>&nbsp;&nbsp;
-                  <a id="clear" class="btn btn-default" href="javascript:execCommand('clear');">清除密码</a>&nbsp;&nbsp;
-                  <a id="erase" class="btn btn-default" href="javascript:execCommand('erase');">清除数据</a>
+                  <%--<a id="clear" class="btn btn-default" href="javascript:execCommand('clear');">清除密码</a>&nbsp;&nbsp;--%>
+                  <%--<a id="erase" class="btn btn-default" href="javascript:execCommand('erase');">清除数据</a>--%>
                  </td>
                  </tr>
            </table>
@@ -135,7 +135,7 @@
 	           success: function (data) { 
 	              $("#mdmCode").val(data.code); 
 	              $("#mdmMobileconfig").val(data.mobileconfig); 
-	              $("#CAconfig").val("https://127.0.0.1:8444/MDMServer/mdmtool/down/ca.crt");
+	              $("#CAconfig").val("https://172.22.211.32:8444/mdmtool/down/ca.crt");
 	              $("#mdmCode").attr("readonly","readonly");
 	              
 	              $("#lock").attr("disabled",false);

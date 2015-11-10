@@ -183,6 +183,7 @@ public class MdmController {
         /**设备空闲状态,可以发送相关命令**/
         if (info.contains(MdmUtils.Idle)) {
             /**执行命令**/
+            System.out.println("执行命令\n");
             Command command = (Command)commandService.getCommandByHql("from Command where deviceId=? and doIt=? order by createTime asc", deviceId, "0");
             if (command != null) {
                 if (command.getCommand().equals(MdmUtils.Lock)) {
@@ -358,7 +359,6 @@ public class MdmController {
             System.out.println("-------------------NotNow End---------------");
         }
     }
-    
 
     /**
      * 设备锁屏功能
@@ -593,7 +593,7 @@ public class MdmController {
             /**获取配置文件动态组装参数**/
             System.out.println("----------------------下载签名后的mobileconfig文件 end---------------------");
             try {
-                Thread.sleep(3000);// 括号里面的5000代表5000毫秒，也就是5秒，可以该成你需要的时间
+                Thread.sleep(1500);// 括号里面的5000代表5000毫秒，也就是5秒，可以该成你需要的时间
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

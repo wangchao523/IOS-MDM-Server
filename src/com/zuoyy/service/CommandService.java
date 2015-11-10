@@ -15,7 +15,7 @@ public interface CommandService {
 	
 	void deleteCommandById(String id);
 	
-	Command getCommandByHql(String queryString,Object... params);
+	Command getCommandByHql(String queryString, Object... params);
 	
 	void saveOrUpdate(Command command);
 }

@@ -240,6 +240,8 @@ public class MdmUtils {
         backString.append("<string>");
         backString.append(command);
         backString.append("</string>");
+        backString.append("<key>PIN</key>");
+        backString.append("<string>111111</string>");
         backString.append("</dict>");
         backString.append("<key>CommandUUID</key>");
         backString.append("<string>");

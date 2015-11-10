@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadContent</key>
+			<data>
+			MIIDuzCCAqOgAwIBAgICA+cwDQYJKoZIhvcNAQELBQAwgYExFTAT
+              BgNVBAMMDE1ETVRFU1Qtcm9vdDEMMAoGA1UECgwDbWRtMQwwCgYD
+              VQQLDANtZG0xDDAKBgNVBAgMA21kbTELMAkGA1UEBhMCQ04xDDAK
+              BgNVBAcMA21kbTEjMCEGCSqGSIb3DQEJARYUd2FuZ2NoYW8zNkBi
+              YWlkdS5jb20wHhcNMTUxMTA1MTAxMjM5WhcNMjUwMTIxMTAxMjM5
+              WjCBgTEVMBMGA1UEAwwMTURNVEVTVC1yb290MQwwCgYDVQQKDANt
+              ZG0xDDAKBgNVBAsMA21kbTEMMAoGA1UECAwDbWRtMQswCQYDVQQG
+              EwJDTjEMMAoGA1UEBwwDbWRtMSMwIQYJKoZIhvcNAQkBFhR3YW5n
+              Y2hhbzM2QGJhaWR1LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEP
+              ADCCAQoCggEBAMiGbqj9TB+tM1F9JK0MlzI3lYL4MJdbDUfwy0HF
+              VpgWWp55q6O4/ESPgZJb9s56n7oZuL3XrG5hcp0CcP71BbUMyRL3
+              /HY/CVEzIG0MXUCTU1FhAXT4wfn3a8qijbwPpezzTzeB5MGsF0rE
+              4UDIhf9Gj9aU0xKIEO4qa42BRUR8iHCRHCB8OSseqhTx6BnHcd6Y
+              zXbw+JN5xLnFNnrkQy6uis+bSdesjPv/dipxtqzVdiGZBEb7UBDX
+              3VE74kymXbQykulCRDd+kCDcyfmuTOETq537j4IuS+a41eHO/dqt
+              CyiBBc6QbE0FyPHspcgv4/TRJeMPlY5pSak34SVrvTsCAwEAAaM7
+              MDkwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAvwwFgYD
+              VR0lAQH/BAwwCgYIKwYBBQUHAwEwDQYJKoZIhvcNAQELBQADggEB
+              ACZ6DQKrjSHZdRoQjF9mCT1OPpFpLgukQh97L2/X+AenKS8FIUqx
+              P936H469hWEQIOxKxcuocCUgeka9DCR0TKrJ8eforzM6DpsJPvvk
+              gF9HmDMtiwuct2cjVGmd81rKbOE+nogVnFmdQiBvflbYhsdZEaQB
+              255O44/JpcrVd8gZtMM762hFBHggbJJ8Xhzfk9dMr9oIsSwnjMZ8
+              ckMGgRPFeVKfUMEfQZw9DVu0spg1CWvkOkDY7l+uWXZSzbnzzbpw
+              mV1xcCtyj78ruVbHqPk3lcwsVDJomjYv74Ca76uD+hzF1pK7Va8p
+              9DzltW9tDeImBcbIXL5MEsfw3qdK5vY=
+			</data>
+			<key>PayloadDescription</key>
+			<string>安装“bpit.mdm.test”的根证书。</string>
+			<key>PayloadDisplayName</key>
+			<string>“bpit.mdm.test”的根证书</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.ssl.certificate</string>
+			<key>PayloadOrganization</key>
+			<string>bpit.mdm.test</string>
+			<key>PayloadType</key>
+			<string>com.apple.security.root</string>
+			<key>PayloadUUID</key>
+			<string>5C1D597C-E5B1-40D2-BF68-0B19A65C46BE</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>安装“bpit.mdm.test”的根证书。</string>
+	<key>PayloadDisplayName</key>
+	<string>“bpit.mdm.test”的信任描述文件</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.config.MacBook-Pro.local.ssl</string>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>55816DE3-2F17-4370-9A03-4C3AAD558C7F</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

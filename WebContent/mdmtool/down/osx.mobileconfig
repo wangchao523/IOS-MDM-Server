@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>PayloadDisplayName</key>
+        <string>新建注册描述文件</string>
+        <key>PayloadIdentifier</key>
+        <string>com.apple.ota.MacBook-Pro.local.bootstrap</string>
+        <key>PayloadRemovalDisallowed</key>
+        <false></false>
+        <key>PayloadType</key>
+        <string>Profile Service</string>
+        <key>PayloadUUID</key>
+        <string>0b4dcb70-6695-0133-96a2-52001497ee40</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>PayloadOrganization</key>
+        <string>bpit.mdm.test</string>
+        <key>PayloadDescription</key>
+        <string>使用管理服务器注册您的设备。</string>
+        <key>PayloadContent</key>
+        <dict>
+            <key>URL</key>
+            <string>https://172.22.249.150/devicemanagement/api/device/auto_join_ota_service</string>
+            <key>DeviceAttributes</key>
+            <array>
+                <string>DEVICE_NAME</string>
+                <string>UDID</string>
+                <string>IMEI</string>
+                <string>MEID</string>
+                <string>DeviceID</string>
+                <string>SERIAL</string>
+                <string>VERSION</string>
+                <string>PRODUCT</string>
+                <string>COMPROMISED</string>
+            </array>
+            <key>Challenge</key>
+            <string>0b441370-6695-0133-96a1-52001497ee40</string>
+        </dict>
+        <key>ConfirmInstallation</key>
+        <true></true>
+    </dict>
+</plist>

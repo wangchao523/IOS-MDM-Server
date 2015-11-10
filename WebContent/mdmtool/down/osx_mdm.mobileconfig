@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist
+PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
+       "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+ <dict>
+  <key>PayloadContent</key>
+  <array>
+   <dict>
+    <key>PayloadContent</key>
+    <dict>
+     <key>CAFingerprint</key>
+     <data>KJx1RN5wUT45kynBaJm/iNducj4=
+</data>
+     <key>Challenge</key>
+     <string>MIIDxgYJKoZIhvcNAQcDoIIDtzCCA7MCAQAxggHDMIIBvwIBADCBpjCBnTE4MDYGA1UEAwwvYnBpdC5tZG0udGVzdCBPcGVuIERpcmVjdG9yeSDor4HkuabpooHlj5HmnLrmnoQxFjAUBgNVBAoMDWJwaXQubWRtLnRlc3QxJTAjBgNVBAsMHE1BQ09TWCBPcGVuRGlyZWN0b3J5IFJvb3QgQ0ExIjAgBgkqhkiG9w0BCQEWE3dhbmdjaGFvNTIzQDEyNi5jb20CBAtpuFAwDQYJKoZIhvcNAQEBBQAEggEALn0OwPuEFUAcCsuXvHh04SAzOeuZ4dZuAV3po+POmC94XQy/Wvp/2h09o3Gzv2VbDJh69Wfbw5Nsjer1YpKJ/roAWBgSm6gUh9bneT5AhhlLVyQ5DbL+J8CFC1jRG0+x6OX1c3DXEGJudg6J9sq2nYEfHihkPg5qpVie1zthz+hch6/7bBunXHWQlqSJIJp2pbvCLP7dLjvjyuylbWe9/yqI4dlgPmm6Zv8FHwLKZMQyUnvt7mFHmJsM1a+mxYiOWOAyAK6TBcOBp7ptFlRrnCruFxCNXeCbcdFCf9HIetT4Xh/Qw6reNzjJbGuNFH6FbhQYOFVCOZWJxEJdzeRvcTCCAeUGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIn+viE74qXzyAggHAkclRz0HxJ5LwcTyJApafnS0ZHzIk7vttBFRUPWFqngLwugVs8Nw7+EeEXnWmuOVFvtbga4RJReKIbCB32BxaWoBmyY14E6tOiws6jpkK2S5ZoGUhwT7GBabR4SjveYfVUqpTsf6PgwbAxtCUHpuqsm4E/xdETEkIL6XzlVpivqZ+2eyG/zIh29Q+Z9nuAo7bFfiYu9k/lj7O3FoMfxlKP8HaJ7asHwGIxHxOe3dLK9wJNBZMiVLLMOIC1v1a3BU1nwGmYzLrZZKTe/bL/CvDUtu3HpjvKO7SiNqpyW6CkyTLdoZAG0ytvo2o7oeUJXZzSqzQbbklvAOEYmZ7pcvijDMoRbf5MZGVbJUx6qKGKij7KwpThnmkQ+QWcc5sHTiBYtX2dXOfyFLaZ3N9ovDVCRtzpY9zwruB079i77biS+JgOeCMYpOscdBPuk7FdsWrj4oZitug5rskdzPVFRNqcIqA4o3Oz2VgmO+v9fO5rvLWQzZlRfVmTwk8kOGK0/z1IOKVe/tYB6vLthCAh5psHz86AnWLWAIBClC8JoP4V5Dd7sZRGVw/IJD7H9RWp719Howc6F3TU67Sm/pWzUEmwQ==</string>
+     <key>Keysize</key>
+     <integer>1024</integer>
+     <key>Key Type</key>
+     <string>RSA</string>
+     <key>Key Usage</key>
+     <integer>0</integer>
+     <key>Name</key>
+     <string>Device Management Identity Certificate</string>
+     <key>Subject</key>
+     <array>
+      <array>
+       <array>
+        <string>CN</string>
+        <string>MDM Identity Certificate:63B88997-1605-4A7F-86B5-EFA4297C3459</string>
+       </array>
+      </array>
+     </array>
+     <key>URL</key>
+     <string>http://172.22.249.150:1640/scep/</string>
+    </dict>
+    <key>PayloadDescription</key>
+    <string>Configures SCEP</string>
+    <key>PayloadDisplayName</key>
+    <string>设备凭证请求</string>
+    <key>PayloadIdentifier</key>
+    <string>com.apple.mdmconfig.SCEP</string>
+    <key>PayloadOrganization</key>
+    <string>bpit.mdm.test</string>
+    <key>PayloadType</key>
+    <string>com.apple.security.scep</string>
+    <key>PayloadUUID</key>
+    <string>5688D400-BF07-4E05-85D8-18EA9A2E0F3E</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+   </dict>
+   <dict>
+    <key>AccessRights</key>
+    <integer>4096</integer>
+    <key>CheckInURL</key>
+    <string>https://172.22.249.150/devicemanagement/api/device/mdm_checkin</string>
+    <key>CheckOutWhenRemoved</key>
+    <true/>
+    <key>IdentityCertificateUUID</key>
+    <string>5688D400-BF07-4E05-85D8-18EA9A2E0F3E</string>
+    <key>PayloadDescription</key>
+    <string>配置“移动设备管理”</string>
+    <key>PayloadDisplayName</key>
+    <string>设备管理</string>
+    <key>PayloadIdentifier</key>
+    <string>com.apple.mdmconfig.mdm</string>
+    <key>PayloadOrganization</key>
+    <string>bpit.mdm.test</string>
+    <key>PayloadType</key>
+    <string>com.apple.mdm</string>
+    <key>PayloadUUID</key>
+    <string>3FD93514-86B6-4192-89C5-AE0F6BD12745</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>ServerCapabilities</key>
+    <array>
+     <string>com.apple.mdm.per-user-connections</string>
+    </array>
+    <key>ServerURL</key>
+    <string>https://172.22.249.150/devicemanagement/api/device/mdm_connect</string>
+    <key>Topic</key>
+    <string>com.apple.mgmt.XServer.9c660f70-105d-41d6-b7ff-0393da0c78a2</string>
+   </dict>
+   <dict>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadDisplayName</key>
+    <string>“”的根证书</string>
+    <key>PayloadIdentifier</key>
+    <string>com.apple.ssl.certificate</string>
+    <key>PayloadType</key>
+    <string>com.apple.security.root</string>
+    <key>PayloadContent</key>
+    <data>MIIErjCCA5agAwIBAgIEC2m4TzANBgkqhkiG9w0BAQsFADCBnTE4MDYGA1UEAwwv
+YnBpdC5tZG0udGVzdCBPcGVuIERpcmVjdG9yeSDor4HkuabpooHlj5HmnLrmnoQx
+FjAUBgNVBAoMDWJwaXQubWRtLnRlc3QxJTAjBgNVBAsMHE1BQ09TWCBPcGVuRGly
+ZWN0b3J5IFJvb3QgQ0ExIjAgBgkqhkiG9w0BCQEWE3dhbmdjaGFvNTIzQDEyNi5j
+b20wHhcNMTUxMTA2MDgwMDI3WhcNMjAxMTA2MDgwMDI3WjCBnTE4MDYGA1UEAwwv
+YnBpdC5tZG0udGVzdCBPcGVuIERpcmVjdG9yeSDor4HkuabpooHlj5HmnLrmnoQx
+FjAUBgNVBAoMDWJwaXQubWRtLnRlc3QxJTAjBgNVBAsMHE1BQ09TWCBPcGVuRGly
+ZWN0b3J5IFJvb3QgQ0ExIjAgBgkqhkiG9w0BCQEWE3dhbmdjaGFvNTIzQDEyNi5j
+b20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCoc5EzNT8M9qhEdUp3
+zq/qo7TYz+kHHFU2Ju2b+d1xHQKN5fCIigHC30P3MuzTduiL3Zmv1m4wzeeIwLCg
+MQgGPOjJB9McHQYZJwskva+oKTlcgjODAZmYh56hSBv/8AEa+s4C5e/hLenhYhW8
+5npBVcAHzdaQTIqH+BLNInK7uJHxplo6CksjxPC1txttQbm6x5Ib68EydlBxZP6y
+Ob9tAXJU+eFLhJV0xew6NjNtyr7estiBQsuOxDf2a4A77cHAXkSTbf3lygaWm+Wn
+bE3WmAljVMtBtZTZBPW1snCNlDfqYfuLYvS/T15GPxemI3jj65YhQhAy/Oqypoo/
+30ZnAgMBAAGjgfMwgfAwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAYYw
+MAYDVR0lAQH/BCYwJAYIKwYBBQUHAwEGCSqGSIb3Y2QEAwYHKwYBBQIDBQYEVR0l
+ADCBmgYDVR0fBIGSMIGPMIGMoIGJoIGGhoGDaHR0cDovL01hY0Jvb2stUHJvLmxv
+Y2FsOjE2NDAvcmZjMjU4NS9icGl0Lm1kbS50ZXN0JTIwT3BlbiUyMERpcmVjdG9y
+eSUyMCVFOCVBRiU4MSVFNCVCOSVBNiVFOSVBMiU4MSVFNSU4RiU5MSVFNiU5QyVC
+QSVFNiU5RSU4NC5jcmwwDQYJKoZIhvcNAQELBQADggEBAJAUSi/qeZrwPmIGUFlH
+sPh/E3mmjb0yhgvzmAvX7nWsW/DUFA68VfDsSbeCmJ2AouK4Hjo8XO1BPnevqppZ
+tz+JxGblRbOKzsMQm97RgzFrtWU4vTlHwSbltMCXC6/qMewnhPOUzcR51KWgAdbI
+VAk+86/E35fScBCHK6JWYn2Jpi/apKWnzotycwbulkLILKNwbT5y1YnNjrUhH8fG
+VIRSjEksdUGkTII3XenWzi/VHgKwFPlGURhxk06rCt/qh7ciAmxzqpoUGS+A3Iga
+33ZQdvRa0UsLLmCwt1VnmqYBoVr8mhvMBVN4LHHjrtvSHgMaqXNzDXw0UZadOqNb
+iR8=
+</data>
+    <key>PayloadOrganization</key>
+    <string>bpit.mdm.test</string>
+    <key>PayloadDescription</key>
+    <string>安装“”的根证书。</string>
+    <key>PayloadUUID</key>
+    <string>5C1D597C-E5B1-40D2-BF68-0B19A65C46BE</string>
+   </dict>
+  </array>
+  <key>PayloadDescription</key>
+  <string>允许服务器管理您的设备。</string>
+  <key>PayloadDisplayName</key>
+  <string>远程管理</string>
+  <key>PayloadIdentifier</key>
+  <string>com.apple.config.172.22.249.150.mdm</string>
+  <key>PayloadOrganization</key>
+  <string>bpit.mdm.test</string>
+  <key>PayloadType</key>
+  <string>Configuration</string>
+  <key>PayloadUUID</key>
+  <string>04F90BB6-8E15-4AE4-A30F-FE9A33D5E184</string>
+  <key>PayloadVersion</key>
+  <integer>1</integer>
+ </dict>
+</plist>
